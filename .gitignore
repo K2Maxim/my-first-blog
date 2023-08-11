@@ -1,0 +1,42 @@
+# Python
+*.pyc
+__pycache__/
+
+# Environment
+.env
+myvenv/
+venv/
+aev/
+
+# Database
+db.sqlite3
+
+# Static folder at project root
+/static/
+/home/gto/static/
+/media/
+/home/gto/media/
+
+# Windows
+Thumbs.db*
+ehthumbs*.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.bash_history
+.bashrc
+.cache/
+.gitconfig
+.local/
+.my.cnf
+.mysql_history
+.profile
+.pythonstartup.py
+.vimrc
+.virtualenvs/
+
+# Other
+README.txt
+db-backup.sql
+manage.py
