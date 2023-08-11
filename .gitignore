@@ -32,7 +32,7 @@ __pycache__/
 
 # Database
 db.sqlite3
-migrations
+migrations/
 
 # Other
 README.txt
