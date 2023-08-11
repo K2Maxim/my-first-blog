@@ -1,24 +1,18 @@
 {% extends "blog/master.html" %}
-{% block title %}Django Girls blog{% endblock %}
-{% block body %}
-    <header class="page-header">
-        <div class="container">
-            <h1><a href="/">Django Girls Blog</a></h1>
+{% block title %}Блог Django Girls{% endblock %}
+{% block extra_title %}Блог Django Girls{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col">
+            {% for post in posts %}
+                <article class="post">
+                    <time class="date">
+                        {{ post.published_date }}
+                    </time>
+                    <h2><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </article>
+            {% endfor %}
         </div>
-    </header>
-    <main class="container">
-        <div class="row">
-            <div class="col">
-                {% for post in posts %}
-                    <article class="post">
-                        <time class="date">
-                            {{ post.published_date }}
-                        </time>
-                        <h2><a href="">{{ post.title }}</a></h2>
-                        <p>{{ post.text|linebreaksbr }}</p>
-                    </article>
-                {% endfor %}
-            </div>
-        </div>
-    </main>
-{% endblock body %}
+    </div>
+{% endblock content %}
