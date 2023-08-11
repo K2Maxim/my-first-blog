@@ -11,7 +11,6 @@ from django.urls import path
 
 app_name = APPLICATION_NAME
 urlpatterns = [
-    path('', views.index, name='index'),
     path(
         'entity/<int:entity_id>/added/',
         views.entity_added,
